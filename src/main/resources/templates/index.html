@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+    <script th:src="jquery-2.2.3.min.js"></script>
+    <script language="javascript">
+        $(function(){
+            alert("测试")
+        });
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th>标识</th>
+        <th>名称</th>
+        <th>密码</th>
+        <th>备注</th>
+    </tr>
+    <!--/*@thymesVar id="list" type="java.util.List<Demo>"*/-->
+    <tr th:each="item:${list}">
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.pasv}"></td>
+        <td th:text="${item.descr}"></td>
+    </tr>
+</table>
+</body>
+</html>

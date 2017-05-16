@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdyx.dbo.dao.DemoDao">
+    <insert id="save" parameterType="com.gdyx.dbo.model.Demo">
+        insert into demo(id,name,pasv,descr)
+        values(#{id},#{name},#{pasv},#{descr})
+    </insert>
+    <select id="findDemos" resultType="com.gdyx.dbo.model.Demo">
+        select * from demo
+    </select>
+</mapper>
